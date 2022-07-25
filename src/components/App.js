@@ -11,7 +11,7 @@ function App() {
   useEffect(() => {
     fetch("http://localhost:3001/pizzas")
     .then(r => r.json())
-    .then(data => setPizzas([...pizzas, data]))
+    .then(data => setPizzas(data))
 
 
   },[])
@@ -21,7 +21,7 @@ console.log(pizzas)
     <>
       <Header />
       <PizzaForm />
-      <PizzaList />
+      <PizzaList pizzas={pizzas} />
     </>
   );
 }
