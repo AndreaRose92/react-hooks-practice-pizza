@@ -1,12 +1,12 @@
 import React from "react";
 import Pizza from "./Pizza";
 
-function PizzaList({pizzas}) {
+function PizzaList({pizzas, handleEditButtonClick}) {
   console.log(pizzas)
   const pizzaPie = pizzas.map((pizza)=> {
     
     return (
-      <Pizza key={pizza.id} topping={pizza.topping} size={pizza.size} veggie={pizza.vegitarian} />
+      <Pizza key={pizza.id} topping={pizza.topping} size={pizza.size} veggie={pizza.vegitarian} handleEditButtonClick={handleEditButtonClick} />
     )
   }  )
   

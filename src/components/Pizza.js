@@ -1,6 +1,6 @@
 import React from "react";
 
-function Pizza({topping, size, veggie}) {
+function Pizza({topping, size, veggie, handleEditButtonClick}) {
   console.log(topping)
   return (
     <tr>
@@ -8,7 +8,7 @@ function Pizza({topping, size, veggie}) {
       <td>{size}</td>
       <td>{veggie}</td>
       <td>
-        <button type="button" className="btn btn-primary">
+        <button type="button" className="btn btn-primary" onClick={handleEditButtonClick}>
           Edit Pizza
         </button>
       </td>

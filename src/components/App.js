@@ -16,12 +16,16 @@ function App() {
 
   },[])
 
-console.log(pizzas)
+function handleEditButtonClick(){
+  console.log("Eyy lmfao")
+}
+
+// console.log(pizzas)
   return (
     <>
       <Header />
       <PizzaForm />
-      <PizzaList pizzas={pizzas} />
+      <PizzaList pizzas={pizzas} handleEditButtonClick={handleEditButtonClick}/>
     </>
   );
 }
